@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Paragraphs</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* 세로 방향으로 정렬 */
+            align-items: center; /* 중앙 정렬 */
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            width: 20%; /* 전체 너비를 사용 */
+            position: relative;
+            margin: 50px 0; /* 위쪽 여백 추가 */
+        }
+
+        .left, .right {
+            position: absolute;
+            top: 50%; /* 세로 중앙 정렬 */
+            transform: translateY(-50%); /* 정확히 중앙에 배치 */
+        }
+
+        .left {
+            left: 0px; /* 왼쪽에서 50px 띄우기 */
+        }
+
+        .right {
+            right: 0px; /* 오른쪽에서 50px 띄우기 */
+        }
+
+        p {
+            text-align: center;
+            line-height: 0.1; /* 줄 높이 조정 */
+        }
+
+        p:first-of-type {
+            margin-top: 50px; /* 첫 문단 위 여백을 원하는 크기로 조정 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">just for a practice</div>
+        <div class="right">regardless of the shape</div>
+    </div>
+    
+    <p>This is the third sentence of a ddddddfff</p>
+    <p>This is the fourth sentence of a cenfffffffff</p>
+    <p>This is the fifth sentence of a centerefffffffff</p>
+    <p>This is the sixth sentence of a centered ddffffffff</p>
+    <p>This is the seventh sentence of a centered paffffffffr</p>
+    <p>This is the seventh sentence of a centered paffffffffr</p>
+    <p>This is the seventh sentence of a centered paffffffffsdfsdr</p>
+    <p>This is the seventh sentence of a centered paffffffffdsfdsfr</p>
+    <p>This is the seventh sentence of a centered paffsdffffffdsdfer</p>
+    
+    <p>This is the.</p>
+    <p>This is the.</p>
+    <p>This is the.</p>
+    <p>This is the.</p>
+    <p>This is the.</p>
+    <p>This is the.</p>
+    <p>This is the.</p>
+    <p>This is the.</p>
+    <p>This is the.</p>
+    <p>This is the.</p>
+    <p>This is the.</p>
+    <p>This is the.</p>
+    <p>This is the.</p>
+    <p>This is the twenty-second sentence of a centered paragraph.</p>
+    <p>This is the twenty-second sentence of a centered paragraph</p>
+</body>
+</html>
