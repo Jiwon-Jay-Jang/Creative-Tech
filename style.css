@@ -1,9 +1,9 @@
 h1 {
-    font-size: 3em; /* "Welcome to South Korea!" 폰트 크기만 크게 설정 */
+    font-size: 2em;
 
 }
 h2 {
-    font-size: 2em; /* "Welcome to South Korea!" 폰트 크기만 크게 설정 */
+    font-size: 1.5em;
     
 }
 p {
@@ -42,14 +42,14 @@ header nav ul { /*> is to make a descendent*/
     padding: 0;
     display: flex;
     flex-direction: column;
-    background-color: rgb(192, 245, 180); 
+    background-color: rgb(83, 150, 68); 
 }
 
 header nav li {
-    padding: 10px;
-    font-size: 15px; 
+    padding: 32px;
+    font-size: 18px; 
     text-transform: uppercase;
-    border-bottom: 2px solid #212121;
+    border-bottom: 2px solid #ffffff;
 }
 
 header nav li:last-child{
@@ -58,24 +58,24 @@ header nav li:last-child{
 
 header nav a {
     text-decoration: none;
-    color: #212121;
+    color: #ffffff;
    
 }
 
 section {
-    padding: 40px 80px;
+    padding: 40px 20px;
 }
 
 #home {
-    background-color:white
+    background-color:rgb(248, 248, 133)
 }
 
 #about {
-    background-color: white;
+    background-color: rgb(154, 226, 83);
 }
 
 #contact {
-    background-color: white
+    background-color: rgb(243, 100, 239)
 }
 
 /*TABLET VIEW*/
@@ -93,6 +93,16 @@ section {
     }
     p {
         font-size: 1.2em; /* 기본 폰트 크기 */}
+
+    section {
+        padding: 40px 60px;
+    h1 {
+            font-size: 3em;
+        
+        }
+    h2 {
+            font-size: 2em;
+    }
         
 }
 
@@ -103,7 +113,7 @@ section {
     }
     header nav ul {
         justify-content: flex-end;
-        background-color: rgb(229, 229, 234)
+        background-color: rgb(0, 0, 0)
     }
 
     main {
@@ -112,5 +122,16 @@ section {
     }
     p {
         font-size: 1.5em; /* 기본 폰트 크기 */}
+
+    section {
+        padding: 40px 200px;
+    
+    h1 {
+            font-size: 5em;
+        
+        }
+    h2 {
+            font-size: 4em;
+    }
         
 }
