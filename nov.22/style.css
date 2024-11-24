@@ -1,0 +1,29 @@
+h1 {
+    font-size: 2em;
+
+}
+h2 {
+    font-size: 1.5em;
+    
+}
+p {
+    font-size: 1.2em; /* 기본 폰트 크기 */
+    line-height: 1.5; /* 줄 간격 */
+    color: #333; /* 텍스트 색상 */
+    margin: 20px 0; /* 위아래 여백 */
+}
+    
+body {
+    margin: 100;
+    font-family: helvetica, Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    margin-bottom: 20px; /* 이미지 아래 여백 추가 */
+}
+
+
+main {
+    padding: 80px 500px;
+}
