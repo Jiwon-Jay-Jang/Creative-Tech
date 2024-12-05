@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
+    <script src="script1.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+</head>
+<body>
+  <header>
+      <h1>Inteactive System with UI</h1>
+  </header>
+  <div>
+      <canvas id="myCanvas"></canvas>
+  </div>
+
+  <div class="container"></div>
+      <container>
+          <h2>Step 1</h2>
+          <p>I created a circle that bounces back inside the canvas when it hits the edges. I used an if statement and a function that reverses the speed by multiplying it by -1. At first, I was confused and wrote += -1, which caused the circle to fly off the screen even faster. This experience helped me realize once again that multiplying by -1 is necessary to reverse the direction and make it bounce back inside.</p>
+          <img src="images/1.png" alt="Image 1">
+      </container>
+      <br><br>
+      <container>
+          <h2>Step 2. </h2>
+          <p>I encountered two errors: the first one was "particle is not defined," and the second was "move is not a function." Initially, I started debugging the issues in `Particle.js`, fixing one thing at a time. I wondered if the problem was related to setting random colors, so I tried assigning specific colors instead. I also corrected typos, like changing `widht` to `width`, and fixed instances where I mistakenly wrote `width` instead of `height`. However, the issue persisted. The breakthrough came when I realized the problem was in `sketch.js`, where I had written `Particles = []` with an uppercase `P`. The `particle` here wasn’t referring to the file name but rather the actual particles, so it needed to be lowercase. The second error stemmed from a typo: I wrote `mov` instead of `move`. The function name in `Particle.js` must match exactly with how it’s called in `sketch.js`. After correcting these issues, everything worked as expected.
+          </p>
+          <img src="images/2-1.png" alt="Image 2-1">
+          <img src="images/2-2.png" alt="Image 2-2">
+          <img src="images/2-3.png" alt="Image 2-3">
+      </container>
+      <br><br>
+      <container>
+          <h2>Step 3. Simplify the code</h2>
+          <p>It was so much fun! I encountered two errors, but the real issue wasn’t actually with the errors themselves—it was somewhere else entirely. 
+            The first error was, *“Cannot read property ‘add’.”* The problem was that I wrote `Pos` instead of `pos` in `pos.add`. While the issue made sense because it was related to `pos.add`, this taught me the importance of thoroughly checking other parts of the code as well.
+            The second error was, *“Cannot read properties of undefined (reading 'x').”* This wasn’t a problem with the code where the error occurred, but rather because I wrote `pos` where I should have written `vel`. 
+            These experiences showed me that while errors often point out specific issues, they can also be caused by something else in the code, which leads to the error manifesting in an unexpected place.</p>
+          <img src="images/3-1.png" alt="Image 3-1">
+          <img src="images/3-2.png" alt="Image 3-2">
+      </container>
+
+      <br><br>
+      <container>
+        <h2>Step 4. Revise the error(the particles always are appeared on the left top of the corner)</h2>
+        <p>This was the part where I had to revise the most code. While following the lecture, I initially thought the reachOut function wasn’t necessary for my project, so I left it out. However, it seems that without this part, the friendless feature wasn’t properly connected. Most importantly, in the sketch.js file, I added the code particles.push(new Particle(mouseX, mouseY)) to specify the mouse position for creating particles. Without this, the computer didn’t know where the particles should be generated, causing confusion.</p>
+        <img src="images/3-3.png" alt="Image 3-3">
+    </container>
+
+    <br><br>
+    <section>
+      <h2>Step 5. </h2>
+      <p>I made the particles appear from the start, with one being green and the others purple. To achieve this, I added a color type parameter to the constructor and modified the relevant conditional statements accordingly.</p>
+      <img src="images/5-1.png" alt="Image 5-1">
+  </section>
+
+  </div>
+
+  <main>
+  </main>
+  <script src="sketch.js"></script>
+</body>
+</html>
