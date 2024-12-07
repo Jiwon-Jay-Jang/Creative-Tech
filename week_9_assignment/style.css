@@ -1,52 +1,61 @@
 html, body {
   margin: 0px;
-  padding: 100px;
+  padding: 40px 120px 0px 120px;
   background-color: black; 
 }
 
-
-
-canvas {
-  display: block;
-}
-body {
-  font-family: 'Times New Roman', Times, serif;
-  color: white;
-  margin: 0;
-  padding: 0;
-  line-height: 1.4;
-}
-
 header {
-  background-color: #ffffff; 
-  text-align: center;
+  text-align: left; /* 중앙 정렬을 왼쪽 정렬로 변경 */
   padding: 20px;
 }
 
-header h1 {
-  color: blue; 
-  margin: 0;
+h1 {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-size: 36px;
+  font-style: normal;
+  color: rgb(255, 255, 255); 
+  margin-bottom: 50;
+  text-align: left; /* 왼쪽 정렬 추가 */
 }
 
-.p5-canvas {
-  border: 1px solid #ccc;
-  align-items: center;
-  display: inline-block;
+h2 {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  margin-bottom: 30;
+  padding: 0;
+  line-height: 1.6;
+  text-align: left; /* 왼쪽 정렬 추가 */
 }
 
-.containers {
-  margin: 100px;
+p {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  margin-bottom: 30;
+  padding: 0;
+  letter-spacing: 0.4Px;
+  line-height: 1.7;
+  text-align: left; /* 왼쪽 정렬 추가 */
 }
 
 container {
   margin-bottom: 40px; 
-  text-align: center;  
+  text-align: left;  /* 왼쪽 정렬 추가 */
   padding: 0 15px; 
 }
 
 container img {
   max-width: 70%; 
   height: auto;  
-  display: block; /* inline-block 대신 block으로 변경 */
-  margin: 10px auto; /* 가로와 세로 여백을 자동으로 설정 */
+  margin: 10px auto;
+}
+
+.p5-canvas {
+  border: 1px solid #ccc;
+  align-items: center;
+  display: inline-block;
 }
