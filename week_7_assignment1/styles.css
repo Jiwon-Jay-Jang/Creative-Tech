@@ -1,7 +1,7 @@
 html, body {
   margin: 0px;
   padding: 40px 120px 0px 120px;
-  background-color: black; 
+  background-color: rgb(20, 20, 20); 
 }
 
 header {
@@ -12,11 +12,12 @@ header {
 h1 {
   font-family: "Poppins", serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
   color: rgb(255, 255, 255); 
-  margin-bottom: 50;
+  margin-bottom: 60;
   text-align: left; /* 왼쪽 정렬 추가 */
+  line-height: 1.6;
 }
 
 h2 {
@@ -36,7 +37,7 @@ p {
   font-style: normal;
   font-size: 16px;
   color: white;
-  margin-bottom: 30;
+  margin-bottom: 60px;
   padding: 0;
   letter-spacing: 0.4Px;
   line-height: 1.7;
