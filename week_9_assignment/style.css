@@ -1,0 +1,52 @@
+html, body {
+  margin: 0px;
+  padding: 100px;
+  background-color: black; 
+}
+
+
+
+canvas {
+  display: block;
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+header {
+  background-color: #ffffff; 
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  color: blue; 
+  margin: 0;
+}
+
+.p5-canvas {
+  border: 1px solid #ccc;
+  align-items: center;
+  display: inline-block;
+}
+
+.containers {
+  margin: 100px;
+}
+
+container {
+  margin-bottom: 40px; 
+  text-align: center;  
+  padding: 0 15px; 
+}
+
+container img {
+  max-width: 70%; 
+  height: auto;  
+  display: block; /* inline-block 대신 block으로 변경 */
+  margin: 10px auto; /* 가로와 세로 여백을 자동으로 설정 */
+}

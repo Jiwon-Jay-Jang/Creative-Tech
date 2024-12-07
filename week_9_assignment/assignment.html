@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
+    <script src="script1.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <header>
+      <h1>Interactive System with UI</h1>
+    </header>
+    <div>
+      <canvas id="myCanvas"></canvas>
+    </div>
+
+    <div class="container"></div>
+        <container>
+        <h2>Sketch</h2>
+        <p>In last week's assignment, I used Teachable Machine to recognize real-world objects and created a Christmas card where the emoji would change based on the object detected. However, I found that Teachable Machine often had issues with object recognition. Therefore, I decided to adjust the idea slightly. Instead of relying on object recognition, I kept the Christmas tree background unchanged. Now, when making a pinch gesture with the left hand, a snow image appears, and when making a pinch gesture with the right hand, a star image appears.</p>
+        <img src="images/0.png" alt="Image 0">
+        </container>
+        <br><br>
+      <container>
+          <h2>Step 1. Load canvas and bgImage</h2>
+          <p>The error message "width is not defined" appeared, so I started by checking for typos. I realized that the problem was with "bgImage," which was incorrectly written as "bgimage." What's funny is that the error refers to "width," but focusing only on that won't help. The issue is related but always seems to be somewhere else.</p>
+          <img src="images/1.png" alt="Image 1">
+      </container>
+      <br><br>
+      <container>
+        <h2>Step 2. Importing handPose Gestures</h2>
+        <p>I imported the handPose gesture code from the ml5 handPose website. The camera overlayed the image, so I decided to hide the camera temporarily.</p>
+        <img src="images/2.png" alt="Image 2">
+      </container>
+      <br><br>
+      <container>
+        <h2>Step 3. Finding the Hand Position</h2>
+        <p>Using the console, I identified the hand landmarks. I needed the tips of the first and second fingers, which turned out to be `hand.index_finger_tip` and `hand.thumb_tip`. Initially, I added `console.log(hand);` before `let hand = hands[i]`, but it caused an error. I had mistakenly thought I defined `hand` as `let hand = []`. Since I had defined `hands` earlier, the log statement needed to come after `let hand = hands[i];` for it to work.</p>
+        <img src="images/3.png" alt="Image 3">
+      </container>
+      <br><br>
+      <container>
+        <h2>Step 4. Adding Dots to Visualize Finger Positions</h2>
+        <p>I encountered an error related to `tip`. I had written `thumb.tip` instead of `thumb_tip`. The error message pointed me to line 41, making it easy to find and fix the issue.</p>
+        <img src="images/4.png" alt="Image 4">
+      </container>
+      <br><br>
+      <container>
+        <h2>Step 5. Loading Images Using Pinch Gestures with Left and Right Hands</h2>
+        <p> When making a pinch gesture with the left hand, a Snow image appears, and when making a pinch gesture with the right hand, a Star image appears. To differentiate between the left and right hands, I set a trigger based on whether the index finger is in front of the thumb or vice versa when performing the pinch gesture. If the thumb is in front, it is recognized as the right hand; if the index finger is in front, it is recognized as the left hand. In the initial if statement, when the distance is less than or equal to 20 and no emoji is displayed on the screen, an image appears at the point where the thumb and index finger touch. Here, !emojiDisplayed is important. Without it, multiple images would appear continuously, causing an error (I confirmed the error but didn’t capture a screenshot). The same logic was applied for the right hand. When the distance is greater than 20, I used false to ensure no new images are drawn. Finally, I wrote the last piece of code to ensure that multiple images could continue to appear on the screen without disappearing.</p>
+        <img src="images/6.png" alt="Image 6">
+      </container>
+      <br><br>
+      <container>
+        <h2>Step 6. DrawImage Error</h2>
+        <p>I received an error saying "drawImage is not defined." I checked line 71 but found no issues. Upon reviewing the `drawImage`-related function code, I discovered that I had written it as `drawEmoji`. `Image` refers to the data being drawn on the canvas when I pinch my fingers, while `Emoji` is the array function that collects the images (including coordinates, triggers, and other data). To avoid confusion, I felt the need to rename `Emoji` to `Image` for consistency. Using uniform terminology makes coding easier and faster.</p>
+        <img src="images/5.png" alt="Image 5">
+      </container>
+      <br><br>
+    </div>
+
+    <main>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
 </html>
