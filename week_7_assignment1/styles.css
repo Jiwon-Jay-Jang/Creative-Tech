@@ -12,7 +12,7 @@ header {
 h1 {
   font-family: "Poppins", serif;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 18px;
   font-style: normal;
   color: rgb(255, 255, 255); 
   margin-bottom: 50;
@@ -34,6 +34,7 @@ p {
   font-family: "Poppins", serif;
   font-weight: 300;
   font-style: normal;
+  font-size: 16px;
   color: white;
   margin-bottom: 30;
   padding: 0;
