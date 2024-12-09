@@ -4,28 +4,41 @@ html, body {
     background-color: black; 
 }
 
-
-
   canvas {
     display: block;
   }
+  
   body {
-    font-family: 'Times New Roman', Times, serif;
     color: white;
     margin: 0;
     padding: 0;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #FFB6C1; 
     text-align: center;
     padding: 20px;
 }
 
-header h1 {
-    color: blue; 
+h1 {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: 100;
+    font-style: normal;
+    color: rgb(255, 255, 255); 
     margin: 0;
+}
+
+h2 {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+p {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .p5-canvas {
@@ -45,8 +58,8 @@ container {
 }
 
 container img {
-    max-width: 100%; 
+    max-width: 70%; 
     height: auto;  
-    display: inline-block; 
-    margin: 10px auto; 
+    display: block; /* inline-block 대신 block으로 변경 */
+    margin: 10px auto; /* 가로와 세로 여백을 자동으로 설정 */
 }
