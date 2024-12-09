@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P5.js</title>
-    <link rel="stylesheet" href="styles.css"
-</head>
-<body>
-    
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
     <script src="sketch.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Week6 Assignment</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h1>Time and Oscillation</h1>
+    
+    <container>
+        <h2>Step1 and 2. Random Background Color</h2>
+        <p>1. Background color: To allow the background to change randomly whenever I click the play button, I wrote the code: random(TWO_PI), 1, 1. The reason that I wrote 1 was to make the background color changed in terms of saturation and brightness between 0 and 1.</p>
+        <p>2. Circle: I draw a circle in the middle of the screen using the code (width * 0.5, height * 0.5) and set the radius to width * 0.1.</p>
+        <img src="images/1.png" alt="Image1">
+    </container>
+    <br><br>
+
+    <container>
+        <h2>Step 3. Moving Circle with Trigonometric Functions</h2>
+        <p>3. Trigonometric function: I used the 'sin' function to move to the right first. I only input values for the x-direction to change only the x-coordinate. To start from the center of the canvas, I first input width/2 and height/2. I multiplied frameCount by 0.05 to make it move slowly. -to make the period of the sine wave longer.</p>
+        <img src="images/2.png" alt="Image2">
+    </container>
+    <br><br>
+
+    <container>
+        <h2>Step4 and 5. Rotating Rectangle</h2>
+        <p>4. Trigonometric function for the rectangle: Both sine and cosine are used to make the rectangle rotate in a circular motion. The value 100 is multiplied to allow it to rotate along a circle with a radius of 100 pixels.</p>
+        <p>5. Interval = 2000: This is set to make the rectangle start rotating after 2 seconds.</p>
+        <img src="images/3.png" alt="Image3">
+        <img src="images/4.png" alt="Image4">
+    </container>
+    <br><br>
+
+    <container>
+        <h2>Step 6. Dynamic Background Color</h2>
+        <p>6. To make the background color changed as time goes by, I wrote the code: if (frameCount % 120 === 0) {
+            bkgndClr = color(random(TWO_PI), 1, 1);</p>
+        <img src="images/5.png" alt="Image5">
+    </container>
+    <br><br>
+
+    <container>
+        <h2>Step 7. Using Perlin Noise for Smooth Movements</h2>
+        <p>7. Perlin Noise: To make the movements smooth and natural, I added the perlin noise function. Retrieved the noise value based on the current noiseOffset and added it to the angle.</p>
+        <img src="images/6.png" alt="Image6">
+        <img src="images/7.png" alt="Image7">
+    </container>
+    <br><br>
 
 </body>
 </html>
