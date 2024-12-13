@@ -1,25 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
-    <script src="script1.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <h1>Interactive System with UI</h1>
-    <div class="container"></div>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
+  <script src="script1.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#Find">Find your interface (due: nov 8)</a></li>
+                <li><a href="#Finish">Finish your interface (due: nov 15)</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section id="Find">
+            <h1 class="p-sans">Find Your Interface (Due: Nov 8)</h1>
+            <div class="container"></div>
         <container>
-        <h2>Step0. Idea Sketch</h2>
-        <p>In last week's assignment, I used Teachable Machine to recognize real-world objects and created a Christmas card where the emoji would change based on the object detected. However, I found that Teachable Machine often had issues with object recognition. Therefore, I decided to adjust the idea slightly. Instead of relying on object recognition, I kept the Christmas tree background unchanged. Now, when making a pinch gesture with the left hand, a snow image appears, and when making a pinch gesture with the right hand, a star image appears.</p>
-        <img src="images/0.png" alt="Image 0">
+        <h2>Step 0. Idea Sketch: Christmas Letter</h2>
+        <p>The goal is to create an interface for making personalized Christmas letters using emojis. Objects are trained using Teachable Machine, and depending on the object, a corresponding emoji will appear. The trigger for displaying the image is the pinch gesture of the user's hand. When a user pinches their thumb and index finger, the emoji appears at the pinch point.        </p>
+        <img src="images/initial.jpg" alt="Image F-0">
         </container>
         <br><br>
 
       <container>
+          <h2>Step 1. Connect Teachable Machine and Set up the Camera</h2>
+          <p>I connected the data trained with Teachable Machine and set up the camera below the empty canvas.</p>
+          <img src="images/F-1.png" alt="Image F-1">
+      </container>
+      <br><br>
+
+      <container>
+        <h2>Step 2. Errors While Adding Dots to Both Fingers</h2>
+        <p>To recognize the position of the fingers on the screen, I attempted to draw circles on the fingers. During this process, I encountered the error: Cannot read properties of undefined (reading 'index_finger_tip'). Upon checking the mentioned line (line 29), I confirmed that the issue wasn’t due to a typo. The error message suggested there was a problem with finger or hand. I reviewed the logic to ensure that the hand was being recognized and that the dots appeared accordingly. I referred back to the handPose example from the ml5 website.
+          While the dots now appeared, they remained on the canvas, leaving trails instead of moving with the hand. To resolve this, I moved background(250) from the setup function to the draw function, ensuring the background was redrawn continuously.
+          Additionally, I wanted to hide the camera feed. When I removed the line image(video, 0, 0, width, height); from the ml5 example file, it caused an issue.</p>
+        <img src="images/F-2.png" alt="Image F-2">
+        <img src="images/F-3.png" alt="Image F-3">
+      </container>
+      <br><br>
+
+      <container>
+        <h2>Step 3. Add Dots to Both Fingers</h2>
+        <p> Using the console, I identified the index and thumb tip points of the fingers. I set the condition to check if at least one hand was detected and ensured that if multiple hands were detected, only the first hand would be processed. For this, I used the following code:if (hands.length > 0) {let hand = hands[0]; let keypoints = hand.keypoints; </p>
+        <img src="images/F-3.png" alt="Image F-3">
+      </container>
+      <br><br>
+
+      <container>
+        <h2>Step 4. Add Dots to Visualize Finger Positions</h2>
+        <p>I encountered an error related to `tip`. I had written `thumb.tip` instead of `thumb_tip`. The error message pointed me to line 41, making it easy to find and fix the issue.</p>
+        <img src="images/F-4.png" alt="Image F-4">
+      </container>
+      <br><br>
+
+      <container>
+        <h2>Step 5. Connect with Teachable Machine</h2>
+        <p>Building on what I learned in class, I connected the interface to Teachable Machine, allowing different emojis to appear for specific objects. For example, holding water displays a beer emoji, and holding coffee displays a coffee emoji. However, when pinching fingers together, the emoji kept appearing repeatedly.</p>
+        <img src="images/F-5.png" alt="Image F-4">
+      </container>
+      <br><br>
+
+      <container>
+        <h2>Step 6. Fix the Issue of Repeated Emoji Appearance</h2>
+        <p>To resolve the issue of emojis repeatedly appearing when pinching fingers together (as mentioned in Step 5), I added a function to check whether the emoji had already been drawn on the screen. Using an if statement, I ensured that the interface would check whether the emoji was drawn after the pinch gesture was performed.</p>
+        <img src="images/F-6.png" alt="Image F-4">
+      </container>
+      <br><br>
+
+
+
+
+
+
+
+
+    </section>
+        <section id="Finish">
+            <h1 class="p-sans">Finish Your Interface (Due: Nov 8)</h1>
+            <div class="container"></div>
+        <container>
+        <h2>Step0. Idea Sketch</h2>
+        <p>In last week's assignment, I used Teachable Machine to recognize real-world objects and created a Christmas card where the emoji would change based on the object detected. However, I found that Teachable Machine often had issues with object recognition. Therefore, I decided to adjust the idea slightly. Instead of relying on object recognition, I kept the Christmas tree background unchanged. Now, when making a pinch gesture with the left hand, a snow image appears, and when making a pinch gesture with the right hand, a star image appears.</p>
+        <img src="images/idea.jpg" alt="Image 0">
+        </container>
+        <br><br>
+
+        <container>
           <h2>Step 1. Load canvas and bgImage</h2>
           <p>The error message "width is not defined" appeared, so I started by checking for typos. I realized that the problem was with "bgImage," which was incorrectly written as "bgimage." What's funny is that the error refers to "width," but focusing only on that won't help. The issue is related but always seems to be somewhere else.</p>
           <img src="images/1.png" alt="Image 1">
@@ -48,22 +124,30 @@
       <br><br>
 
       <container>
-        <h2>Step 5. Loading Images Using Pinch Gestures with Left and Right Hands</h2>
-        <p> When making a pinch gesture with the left hand, a Snow image appears, and when making a pinch gesture with the right hand, a Star image appears. To differentiate between the left and right hands, I set a trigger based on whether the index finger is in front of the thumb or vice versa when performing the pinch gesture. If the thumb is in front, it is recognized as the right hand; if the index finger is in front, it is recognized as the left hand. In the initial if statement, when the distance is less than or equal to 20 and no emoji is displayed on the screen, an image appears at the point where the thumb and index finger touch. Here, !emojiDisplayed is important. Without it, multiple images would appear continuously, causing an error (I confirmed the error but didn’t capture a screenshot). The same logic was applied for the right hand. When the distance is greater than 20, I used false to ensure no new images are drawn. Finally, I wrote the last piece of code to ensure that multiple images could continue to appear on the screen without disappearing.</p>
-        <img src="images/6.png" alt="Image 6">
-      </container>
-      <br><br>
-      
-      <container>
-        <h2>Step 6. DrawImage Error</h2>
+        <h2>Step 5. DrawImage Error</h2>
         <p>I received an error saying "drawImage is not defined." I checked line 71 but found no issues. Upon reviewing the `drawImage`-related function code, I discovered that I had written it as `drawEmoji`. `Image` refers to the data being drawn on the canvas when I pinch my fingers, while `Emoji` is the array function that collects the images (including coordinates, triggers, and other data). To avoid confusion, I felt the need to rename `Emoji` to `Image` for consistency. Using uniform terminology makes coding easier and faster.</p>
         <img src="images/5.png" alt="Image 5">
       </container>
       <br><br>
-    </div>
 
-    <main>
+      <container>
+        <h2>Step 6. Loading Images Using Pinch Gestures with Left and Right Hands</h2>
+        <p> When making a pinch gesture with the left hand, a Snow image appears, and when making a pinch gesture with the right hand, a Star image appears. To differentiate between the left and right hands, I set a trigger based on whether the index finger is in front of the thumb or vice versa when performing the pinch gesture. If the thumb is in front, it is recognized as the right hand; if the index finger is in front, it is recognized as the left hand. In the initial if statement, when the distance is less than or equal to 20 and no emoji is displayed on the screen, an image appears at the point where the thumb and index finger touch. Here, !emojiDisplayed is important. Without it, multiple images would appear continuously, causing an error (I confirmed the error but didn’t capture a screenshot). The same logic was applied for the right hand. When the distance is greater than 20, I used false to ensure no new images are drawn. Finally, I wrote the last piece of code to ensure that multiple images could continue to appear on the screen without disappearing.</p>
+        <img src="images/6.png" alt="Image 6">
+      </container>
+      <br><br>
+
+      <container>
+        <h2>Step 7. Background Size Issue When Performing Pinch Gesture</h2>
+        <p>Although the images appear as intended when I make a pinch gesture, an issue arose where the background size would also increase.</p>
+        <img src="images/7.png" alt="Image 5">
+      </container>
+      <br><br>
+
+    </section>
     </main>
-    <script src="sketch.js"></script>
-  </body>
+
+
+    
+</body> 
 </html>

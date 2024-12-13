@@ -4,7 +4,7 @@ let handPose;
 let hands = [];
 let indexPosX;
 let indexPosY;
-let thumbPosX;
+let thumbPosX; 
 let thumbPosY;
 
 let leftHandImage;
