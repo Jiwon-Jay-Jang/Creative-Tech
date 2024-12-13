@@ -1,0 +1,56 @@
+html, body {
+    margin: 0px;
+    padding: 40px 120px 0px 120px;
+    background-color: black; 
+  }
+  
+  header {
+    text-align: left; /* 중앙 정렬을 왼쪽 정렬로 변경 */
+    padding: 20px;
+  }
+  
+  h1 {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: 36px;
+    font-style: normal;
+    color: rgb(255, 255, 255); 
+    margin-bottom: 50;
+    text-align: left; /* 왼쪽 정렬 추가 */
+  }
+  
+  h2 {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    margin-bottom: 30;
+    padding: 0;
+    line-height: 1.6;
+    text-align: left; /* 왼쪽 정렬 추가 */
+  }
+  
+  p {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    margin-bottom: 30;
+    padding: 0;
+    letter-spacing: 0.4Px;
+    line-height: 1.7;
+    text-align: left; /* 왼쪽 정렬 추가 */
+  }
+  
+  container {
+    margin-bottom: 40px; 
+    text-align: left;  /* 왼쪽 정렬 추가 */
+    padding: 0 15px; 
+  }
+  
+  container img {
+    max-width: 100%; 
+    height: auto;  
+    margin: 10px auto;
+  }
+  
