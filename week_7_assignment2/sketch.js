@@ -39,3 +39,45 @@ function draw() {
   // Update the particles array with the remaining particles
   particles = particlesToKeep;
 }
+
+
+class Particle {
+  constructor(_x, _y, _color) {
+    this.pos = createVector(_x, _y);
+    this.vel = createVector(random(-3, 3), random(-3, 3));
+    this.radius = random(15, 45);
+    this.partColor = _color || color(map(_x, 0, width, 0, TWO_PI), 0.9, 0.9);
+    this.friendliness = random(70, 250);
+  }
+
+  move() {
+    this.pos.add(this.vel);
+
+    if (this.pos.x - this.radius <= 0 || this.pos.x + this.radius >= width) {
+      this.vel.x *= -1;
+    }
+
+    if (this.pos.y - this.radius <= 0 || this.pos.y + this.radius >= height) {
+      this.vel.y *= -1;
+    }
+  }
+
+  display() {
+    fill(this.partColor);
+    noStroke();
+    circle(this.pos.x, this.pos.y, this.radius * 2);
+  }
+
+  reachOut(_allparticles) {
+    _allparticles.forEach((otherP) => {
+      if (this.pos !== otherP.pos && this.pos.dist(otherP.pos) <= this.friendliness) {
+        stroke(TWO_PI / 2, 1, 1);
+        line(this.pos.x, this.pos.y, otherP.pos.x, otherP.pos.y);
+      }
+    });
+  }
+
+  isTouching(otherP) {
+    return this.pos.dist(otherP.pos) < this.radius + otherP.radius;
+  }
+}
