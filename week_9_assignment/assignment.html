@@ -24,7 +24,9 @@
     <main>
         <section id="Find">
             <h1 class="p-sans">Find Your Interface (Due: Nov 8)</h1>
-            <div class="container"></div>
+            <a href="https://editor.p5js.org/jjang12/sketches/UkK4B3uuH" 
+   style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 18px; font-family: 'Poppins', serif; font-weight: 500;">Link for P5.js</a>
+   <div class="container"></div>
         <container>
         <h2>Step 0. Idea Sketch: Christmas Letter</h2>
         <p>The goal is to create an interface for making personalized Christmas letters using emojis. Objects are trained using Teachable Machine, and depending on the object, a corresponding emoji will appear. The trigger for displaying the image is the pinch gesture of the user's hand. When a user pinches their thumb and index finger, the emoji appears at the pinch point.        </p>
@@ -45,14 +47,13 @@
           While the dots now appeared, they remained on the canvas, leaving trails instead of moving with the hand. To resolve this, I moved background(250) from the setup function to the draw function, ensuring the background was redrawn continuously.
           Additionally, I wanted to hide the camera feed. When I removed the line image(video, 0, 0, width, height); from the ml5 example file, it caused an issue.</p>
         <img src="images/F-2.png" alt="Image F-2">
-        <img src="images/F-3.png" alt="Image F-3">
       </container>
       <br><br>
 
       <container>
         <h2>Step 3. Add Dots to Both Fingers</h2>
         <p> Using the console, I identified the index and thumb tip points of the fingers. I set the condition to check if at least one hand was detected and ensured that if multiple hands were detected, only the first hand would be processed. For this, I used the following code:if (hands.length > 0) {let hand = hands[0]; let keypoints = hand.keypoints; </p>
-        <img src="images/F-3.png" alt="Image F-3">
+        <img src="images/111.png" alt="Image F-3">
       </container>
       <br><br>
 
@@ -88,6 +89,8 @@
         <section id="Finish">
             <h1 class="p-sans">Finish Your Interface (Due: Nov 8)</h1>
             <div class="container"></div>
+            <a href="https://editor.p5js.org/jjang12/sketches/UkK4B3uuH" 
+   style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 18px; font-family: 'Poppins', serif; font-weight: 500;">Link for P5.js</a>
         <container>
         <h2>Step0. Idea Sketch</h2>
         <p>In last week's assignment, I used Teachable Machine to recognize real-world objects and created a Christmas card where the emoji would change based on the object detected. However, I found that Teachable Machine often had issues with object recognition. Therefore, I decided to adjust the idea slightly. Instead of relying on object recognition, I kept the Christmas tree background unchanged. Now, when making a pinch gesture with the left hand, a snow image appears, and when making a pinch gesture with the right hand, a star image appears.</p>
@@ -139,8 +142,9 @@
 
       <container>
         <h2>Step 7. Background Size Issue When Performing Pinch Gesture</h2>
-        <p>Although the images appear as intended when I make a pinch gesture, an issue arose where the background size would also increase.</p>
+        <p>Although the images appear as intended when I make a pinch gesture, an issue arose where the background size would also increase. I added the imageMode(CORNER) code to position the image at the top-left corner.</p>
         <img src="images/7.png" alt="Image 5">
+        <img src="images/123.png" alt="Image 5">
       </container>
       <br><br>
 
