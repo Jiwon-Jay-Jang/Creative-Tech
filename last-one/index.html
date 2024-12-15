@@ -9,21 +9,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h1>Multi-channel music controller</h1>
+  <body> 
+    <h1>Multi-channel Controller</h1>
+    <iframe 
+    src="https://player.vimeo.com/video/1039314428" 
+    width="640" 
+    height="360" 
+    frameborder="0" 
+    allow="autoplay; fullscreen; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
+<iframe 
+    src="https://player.vimeo.com/video/1039328360" 
+    width="500" 
+    height="400" 
+    frameborder="0" 
+    allow="autoplay; fullscreen; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
     <div class="container"></div>
         <container>
-        <h2>Assignment</h2>
-        <p>Create a system that would allow you to send messages from 4 sensors via a serial communication from ESP32 to your computer running a Processing sketch. When selecting sensors consider how they match the affordances of the parameters they are meant to control.
-
-            Implement a sound library in Processing to enable either sound file playback or sound synthesis or both in response to the control signals coming from ESP32. Consider the accompanying visuals - how would you express on the screen the sound parameters you are controlling?
-            
-            Make decisions about these additional questions: Will you make it for your own personal use or more general, usable by a larger group of people? Is it mean for solo performance or multiple people? Will it be specific to a genre of music? How do you select the parameters that you can manipulate, how do the ergonomics and the process of playing affect the layout and the functionality?
-            
-            Capture the build process in images and videos and add with written explanations to your websites.</p>
-        <img src="images/1.png" alt="Image F-0">
+        <h2>Step 1. Connecting the Sensor</h2>
+        <img src="images/55.jpg" alt="Image 1">
         </container>
         <br><br>
+
+        <container>
+        <h2>Step 2. Writing Arduino Code for the Sensors</h2>
+        <p>We used analog sensors such as a distance sensor and a slider sensor, as well as a digital sensor like a button. The code was written accordingly.</p>
+        <img src="images/1.png" alt="Image 1">
+        </container>
+        <br><br>
+
+      <container>
+      <h2>Step 3. Assigning Functions to Each Sensor Using Processing</h2>
+      <p>To make the button toggle Revert, we assigned the value 1 to the float variable because it is digital. The distance sensor was assigned delay feedback, and the slider was programmed to change frequency.</p>
+      <img src="images/2.png" alt="Image 1">
+      </container>
+      <br><br>
 
     <main>
     </main>
