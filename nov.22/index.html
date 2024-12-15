@@ -27,21 +27,29 @@
         <br><br>
 
         <container>
-        <h2>Step 1. Connect the sensor</h2>
-        <p>Since it is an analog sensor, POT_PIN was added and connected to A0.</p>
-        <img src="images/1.png" alt="Image 1">
+        <h2>Step 1. Connect the sensor(ESP32)</h2>
+        <p>Connected the circuit to the ESP32, referring to Autodesk Thinkercad.</p>
+        <img src="images/refer.png" alt="Image 1">
+        <img src="images/1234.png" alt="Image 1">
         </container>
         <br><br>
 
         <container>
-        <h2>Step 2. Check the connected port</h2>
+          <h2>Step 2. Connect the sensor(Arduino)</h2>
+          <p>Since it is an analog sensor, POT_PIN was added and connected to A0.</p>
+          <img src="images/1.png" alt="Image 1">
+          </container>
+          <br><br>
+
+        <container>
+        <h2>Step 3. Check the connected port</h2>
         <p>Used `printArray(Serial.list());` to check the connected ports.</p>
         <img src="images/2.png" alt="Image 2">
         </container>
         <br><br>
 
         <container>
-        <h2>Step 3. Troubleshooting during connection</h2>
+        <h2>Step 4. Troubleshooting during connection</h2>
         <p>There were many challenges until I successfully made the connection. Initially, the code I wrote worked, and I took a video. However, when I reopened the code a week later, it didn’t work. After multiple attempts, I eventually rewrote the code using Ethan's code, who used the same sensor and interaction. The issue was that even Ethan's code didn't work at first. The reasons included Adafruit being disconnected and the port being incorrectly connected, possibly due to not using the Arduino for a week or an update. Additionally, with the help of ChatGPT, I added exception handling using the try function, and it finally worked. Honestly, I made so many changes that I’m not exactly sure what the issue was… But now it works!!!</p>
         <img src="images/3.png" alt="Image 3">
         </container>
