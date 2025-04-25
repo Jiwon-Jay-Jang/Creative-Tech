@@ -12,7 +12,7 @@ html, body {
   h1 {
     font-family: "Poppins", serif;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 48px;
     font-style: normal;
     color: rgb(255, 255, 255); 
     margin-bottom: 50;
@@ -21,12 +21,24 @@ html, body {
   
   h2 {
     font-family: "Poppins", serif;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
+    font-size: 34px;
     color: white;
-    margin-bottom: 30;
+    margin-bottom: 20;
     padding: 0;
     line-height: 1.6;
+    text-align: left; /* 왼쪽 정렬 추가 */
+  }
+
+  h3 {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: white;
+    margin-top: 40;
+    padding: 0;
     text-align: left; /* 왼쪽 정렬 추가 */
   }
   
@@ -54,3 +66,8 @@ html, body {
     margin: 10px auto;
   }
   
+  a.custom-link {
+    color: #f9a269;
+    text-decoration: none;
+    font-weight: bold;
+  }
